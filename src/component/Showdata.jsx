@@ -7,13 +7,14 @@ function ShowData({ show, handler }) {
 
  function change(e){
    setvalue(e.target.value)
+  
  }
 
 
   function getdata(e) {
     e.preventDefault();
     handler(changevalue);
-   
+    setvalue("")
    
   }
 
