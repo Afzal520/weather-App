@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./show.css"
-import ErrorM from "./Error";
+
+import ErrorM from "./Loading";
 function ShowData({ show, handler }) {
   let[changevalue,setvalue]=useState("")
   
@@ -79,9 +78,9 @@ function ShowData({ show, handler }) {
           <div class="humidity">Humidity:{show.main.humidity}%</div>
           <div class="wind">Wind Speed:{show.wind.speed} km/hr</div>
 
-          <div class="wind mt-2">Wind direction: {show.wind.deg}°</div>
+          <div class="deg">Wind direction: {show.wind.deg}°</div>
 
-          <h6 className="mt-2">Sunrise:{show.sys.sunrise}</h6>
+          <h6 className="surise">Sunrise:{show.sys.sunrise}</h6>
         </div>
       </div>
     </>

@@ -12,9 +12,10 @@ body {
    } 
    
    .card {
-    background-color: black;
+   background-image: url(/images/b.jpg);
     padding: 2em;
-    color: white;
+    background-size: cover;
+    color: rgb(53, 36, 36);
     border-radius: 30px;
     width: 100%;
     max-width: 420px;
@@ -33,14 +34,16 @@ body {
     outline: none;
     padding: 0.4em 1em;
     border-radius: 30px;
-    background-color: #534b4b;
-    color: white;
+    background-color: white;
+    color: rgb(15, 1, 1);
     font-size: 120%;
     width: calc(100% - 100px);
     font-family: 'Roboto';
     letter-spacing: 2px;
    }
-   
+   .deg{
+    margin-top: 10px;
+   }
    button {
     margin: 0.5em;
     border-radius: 50%;
@@ -48,8 +51,8 @@ body {
     height: 3em;
     width: 3em;
     outline: none;
-    background-color: #534b4b;
-    color: white;
+    background-color: white;
+    color: black;
     cursor: pointer;
     transition: 0.3s ease-in-out;
    }
@@ -110,8 +113,14 @@ body {
    @media screen and (max-width: 420px) {
     .card {
       border-radius: 35px;
-      max-width: 320px;
+      max-width: 276px;
      }
+     .search {
+        margin-top: 20px;
+        
+    }
+    
+    
    
     input.search-bar {
      padding: 0.3em 0.8em;

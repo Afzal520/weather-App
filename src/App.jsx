@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import ShowData from "./Showdata";
-import ErrorM from "./Error";
+import ShowData from "./component/Showdata";
+
+import Loading from "./component/Loading";
 function App() {
   let [apidata, setdata] = useState();
   let [search, setsearch] = useState("london");
@@ -36,7 +37,7 @@ function App() {
   return (
     <>
       {!apidata ? (
-        <ErrorM data="loading data"></ErrorM>
+        <Loading data="Loading Data...."></Loading>
       ) : (
         <ShowData show={apidata} handler={hand}></ShowData>
       )}
