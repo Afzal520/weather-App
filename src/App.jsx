@@ -4,9 +4,11 @@ import ShowData from "./component/Showdata";
 import Loading from "./component/Loading";
 function App() {
   let [apidata, setdata] = useState();
-  let [search, setsearch] = useState("london");
+  let [isloading, setloading] = useState(false)
+
+  let [search, setsearch] = useState("New York");
   let Api_key = "8cc18a4d5f841cdad6b7744b3aff9b44";
-  let Dat = async () => {
+  let fetchdata = async () => {
     try {
       let response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${Api_key}&units=metric`
@@ -22,24 +24,32 @@ function App() {
     } catch (error) {
       console.error(error);
     }
+    finally {
+      setloading(false)
+    }
   };
 
   function hand(s) {
+
     setsearch(s);
+    setloading(true)
   }
-  console.log(search);
-  console.log(apidata);
+
 
   useEffect(() => {
-    Dat();
+    fetchdata();
   }, [search]);
+
 
   return (
     <>
+
+     
+
       {!apidata ? (
         <Loading data="Loading Data...."></Loading>
       ) : (
-        <ShowData show={apidata} handler={hand}></ShowData>
+        <ShowData show={apidata} handler={hand} ShowData={isloading} ></ShowData>
       )}
     </>
   );

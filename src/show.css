@@ -4,10 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: darkgrey;
+   background-size: cover;
     margin: 0;
     font-size: 120%;
-    background-image: url("https://source.unsplash.com/1600x900/?nature,landscape");
+    background-image: url(/images/b.jpg);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    } 
    
@@ -32,6 +32,7 @@ body {
    input.search-bar {
     border: none;
     outline: none;
+    margin-right: 7px;
     padding: 0.4em 1em;
     border-radius: 30px;
     background-color: white;
@@ -125,9 +126,9 @@ body {
     input.search-bar {
      padding: 0.3em 0.8em;
      border-radius: 30px;
-     background-color: #534b4b;
-     color: white;
-     width: calc(100% - 100px);
+     background-color: white;
+     color: black;
+     width: calc(100% - 30px);
      letter-spacing: 1px;
     }
    }
